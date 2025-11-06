@@ -2,15 +2,12 @@
 
 # Proyecto: Gestión de Empleados SALMONTT
 
----
-
 ## 📘 Descripción general del sistema
 Este proyecto corresponde a la evaluación sumativa numero 1 del segundo bimestre correspondiente a la asignatura *Desarrollo Orientado a Objetos I*. Se trata de una aplicacion Java orientada a objetos para gestionar empleados de la empresa Salmontt de Puerto Montt. Permite instanciar empleados con todos sus datos personales como Rut validado, direccion (opcional o completa) y salario, aplicando buenas practicas de herencia, composicion, polimorfismo y validacion en Java.
 
 El proyecto fue desarrollado a partir de un caso contextualizado, abordando problemáticas reales y proponiendo una solución estructurada, modular y reutilizable.
 
 ---
-
 
 ## 🧱 Estructura general del proyecto
 
@@ -23,8 +20,8 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 ┃ ┣ 📂 model/					
 ┃ ┃ ┣ 📜 Direccion				# Encapsula dirección física, con validaciones
 ┃ ┃ ┣ 📜 Empleado				# Extiende Persona, contiene informacion laboral y salario.
-┃ ┃ ┣ 📜 Persona					# Clase abstracta con datos personales, direccion y contacto
-┃ ┃ ┣ 📜 Rut						# encapsula el RUT y valida su formato con excepción personalizada
+┃ ┃ ┣ 📜 Persona				# Clase abstracta con datos personales, direccion y contacto
+┃ ┃ ┣ 📜 Rut					# encapsula el RUT y valida su formato con excepción personalizada
 ┃ ┣ 📂 util/					
 ┃ ┃ ┣ 📜 ValidaRutException		# Excepcion propia para rut inválido
 ┣ 📜 .gitignore
@@ -37,13 +34,15 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 
 ## ⚙️ Instrucciones para clonar y ejecutar el proyecto
 
-- Clona o descarga todo el contenido del proyecto desde el enlace de github
-	
-- Verifica que la estructura de carpetas corresponda a los paquetes indicados.
-- Abre el proyecto en tu IDE Favorito, se recomienda IntelliJ.
-- Abre la clase Main del paquete app/ y ejecuta el proyecto.
+1. clonar el repositorio
+```bash
+git clone https://github.com/matisuarezm/Duoc_Desarrollo_a_Objetos_I
+```
+2. Verifica que la estructura de carpetas corresponda a los paquetes indicados.
+3. Abre el proyecto en tu IDE Favorito, fue creado en IntelliJ.
+4. Abre la clase Main del paquete app/ y ejecuta el proyecto.
 
-Nota: La clase Main ya trae algunos ejemplos que se mostraran en consola.
+- Nota: La clase Main ya trae algunos ejemplos que se mostraran en consola.
 
 ---
 
