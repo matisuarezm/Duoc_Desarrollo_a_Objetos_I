@@ -19,10 +19,10 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 
 Salmontt es una empresa salmonera con sede en Puerto Montt, dedicada desde hace más de 15 años a la producción, procesamiento y exportación de salmón. Su crecimiento sostenido la ha posicionado como un actor relevante en la industria acuícola del sur de Chile, con múltiples centros de cultivo, plantas de proceso y una red logística nacional e internacional.
 Este desarrollo acelerado ha generado diversos desafíos en la gestión de su información interna, entre ellos:
- -Duplicación de datos entre diferentes áreas, lo que genera inconsistencias y pérdida de trazabilidad.
- -Desorganización estructural, ya que la información se gestiona sin una lógica común y con formatos dispares.
- -Ausencia de jerarquías claras entre las personas que interactúan con la empresa, dificultando los procesos de registro, comunicación y seguimiento.
- -Procesos manuales repetitivos, como la incorporación de nuevos empleados o la actualización de datos, que incrementan la carga administrativa y los errores.
+-Duplicación de datos entre diferentes áreas, lo que genera inconsistencias y pérdida de trazabilidad.
+-Desorganización estructural, ya que la información se gestiona sin una lógica común y con formatos dispares.
+-Ausencia de jerarquías claras entre las personas que interactúan con la empresa, dificultando los procesos de registro, comunicación y seguimiento.
+-Procesos manuales repetitivos, como la incorporación de nuevos empleados o la actualización de datos, que incrementan la carga administrativa y los errores.
 
 Frente a este escenario, la gerencia ha decidido iniciar un proceso de digitalización de sus sistemas internos. La primera fase contempla el desarrollo de una base técnica que represente de forma estructurada las personas que forman parte de la organización, como primer paso hacia un sistema más completo.
 Para ello, se solicita diseñar un modelo en Java que represente a estas personas mediante clases bien definidas, con atributos protegidos mediante encapsulamiento, relaciones claras entre objetos (por ejemplo, una persona tiene una dirección), y una estructura ordenada que siente las bases para futuras funcionalidades.
