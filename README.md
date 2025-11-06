@@ -36,9 +36,9 @@ El proyecto fue desarrollado a partir de un caso contextualizado, abordando prob
 ```bash
 git clone https://github.com/matisuarezm/Duoc_Desarrollo_a_Objetos_I
 ```
-### 2. Verifica que la estructura de carpetas corresponda a los paquetes indicados.
-### 3. Abre el proyecto en tu IDE Favorito, fue creado en IntelliJ.
-### 4. Abre la clase Main del paquete app/ y ejecuta el proyecto.
+### 2. Abre el proyecto en tu IDE Favorito, éste fue creado en IntelliJ.
+### 3. Abre la clase Main del paquete app/
+### 4. Puedes ejecutar el proyecto.
 
 - Nota: La clase Main ya trae algunos ejemplos que se mostraran por consola.
 
