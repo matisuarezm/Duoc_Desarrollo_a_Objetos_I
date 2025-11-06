@@ -1,4 +1,4 @@
-### 🧠 Evaluación Sumativa Semana 3 – Desarrollo Orientado a Objetos I
+### Evaluación Sumativa Semana 3 – Desarrollo Orientado a Objetos I
 
 # 📘 Proyecto: Gestión de Empleados SALMONTT
 
