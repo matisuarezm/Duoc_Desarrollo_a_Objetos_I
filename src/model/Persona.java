@@ -2,8 +2,16 @@ package model;
 
 import util.ValidaRutException;
 
+/**
+ * Clase abstracta que funciona como base para ser heredada, está compuesta por las subclases {@link Rut} y {@link Direccion}
+ *
+ * @author msuarez
+ * @version 1.0
+ */
+
 public abstract class Persona {
 
+    //Atrubutos privados de la clase
     private String nombre;
     private String apellido;
     private Rut rut;
@@ -90,13 +98,23 @@ public abstract class Persona {
     }
 
     /** Establece el RUT */
-    public void setRut(Rut rut) {
+    public void setRut(Rut rut){
         this.rut = rut;
+    }
+
+    /** Sobre carga de método set para establecer un RUT sin crear el objeto antes */
+    public void setRut(String rut) throws ValidaRutException {
+        this.rut = new Rut(rut);
     }
 
     /** Establece una direccion */
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
+    }
+
+    /** Sobre carga de método set para establecer una direccion sin crear el objeto antes */
+    public void setDireccion(String calle, int numero, String casaDepartamento, String comuna, String region){
+        this.direccion = new Direccion(calle, numero,casaDepartamento,comuna,region);
     }
 
     /** Establece un telefono */

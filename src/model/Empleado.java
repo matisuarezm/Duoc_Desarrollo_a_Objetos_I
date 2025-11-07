@@ -2,6 +2,12 @@ package model;
 
 import util.ValidaRutException;
 
+/**
+ *
+ * @author msuarez
+ * @version 1.0
+ */
+
 public class Empleado extends Persona{
 
     private String fechaIngreso;
@@ -21,7 +27,7 @@ public class Empleado extends Persona{
         this.sueldo = sueldo;
     }
 
-    //Constructor datos Persona y empleado
+    //Constructor datos Persona y empleado (Objeto Direccion)
     public Empleado(String nombre, String apellido, String textoRut, Direccion direccion, String telefono,
                     String fechaIngreso,String cargo,String departamento, String email, double sueldo) throws ValidaRutException {
        super(nombre, apellido, textoRut, direccion, telefono);
