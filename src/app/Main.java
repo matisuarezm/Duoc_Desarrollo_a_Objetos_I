@@ -39,17 +39,10 @@ public class Main {
 
             System.out.println("-----------------------------");
 
-            //Objeto empleado, direccion, teléfono y mail vacíos. Estos para probar el toString()
-            Persona empleado3 = new Empleado("Victoria", "Suarez", "26680048-7", null,"", "20-01-2020", "Encargado TI",
-                    "Informatica", "", 2000);
-            System.out.printf(empleado3.toString());
-
-            System.out.println("-----------------------------");
-
             //Objeto empleado con campos nulos o vacíos.
-            Persona empleado4 = new Empleado("Matias", "Suarez", "17404347-7", null, null, "20-01-2020", "",
+            Persona empleado3 = new Empleado("Matias", "Suarez", "17404347-7", null, null, "20-01-2020", "",
                     "Informatica", "", 1000);
-            System.out.printf(empleado4.toString());
+            System.out.printf(empleado3.toString());
 
             System.out.println("-----------------------------");
 
@@ -61,13 +54,12 @@ public class Main {
             direccion2.setComuna("Runge");
             direccion2.setRegion("XIII");
 
-            Persona persona = new Empleado(); //Al instancia a Persona y no Empleado, no deja utilizar los atributos de Empleado en los setters
+            Persona persona = new Empleado();
             persona.setNombre("Diego");
             persona.setApellido("Varela");
             persona.setRut("15682541-7");
             persona.setTelefono("+56987456213");
             persona.setDireccion(direccion2);
-
 
             System.out.println(persona);
 
