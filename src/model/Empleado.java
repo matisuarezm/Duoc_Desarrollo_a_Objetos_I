@@ -3,6 +3,8 @@ package model;
 import util.ValidaRutException;
 
 /**
+ * Clase que representa a un empleadode la empresa salmontt, extendiendo los datos de personales de la calse {@link Persona}.
+ * incluye información laboral como fecha de ingreso, cargo, departamento, mail y sueldo
  *
  * @author msuarez
  * @version 1.0
@@ -16,8 +18,19 @@ public class Empleado extends Persona{
     private String email;
     private double sueldo;
 
+    /** Constructor vacio para facilitar la herencia */
     public Empleado(){}
 
+    /**
+     * Constructor con parametros que inicializa solo los datos laborales del empleado
+     *
+     * @param fechaIngreso Fecha de ingreso en formato String
+     * @param cargo Cargo laboral
+     * @param departamento Departamento o area del empleado
+     * @param email Email corporativo del empleado
+     * @param sueldo Salario mensual. Debe ser mayor a 0
+     * @throws IllegalArgumentException si el sueldo es negativo.
+     */
     public Empleado(String fechaIngreso,String cargo,String departamento, String email, double sueldo){ //Datos Empleado
         validaSueldo(sueldo);
         this.fechaIngreso = fechaIngreso;
@@ -27,7 +40,22 @@ public class Empleado extends Persona{
         this.sueldo = sueldo;
     }
 
-    //Constructor datos Persona y empleado (Objeto Direccion)
+    /**
+     * Constructor que inicializa todos los parametros Laborales y Personales de un empleado
+     *
+     * @param nombre Nombre del empleado
+     * @param apellido Apellido del empleado
+     * @param textoRut RUT en formato String
+     * @param direccion objeto Direccion con los datos del domicilio
+     * @param telefono Telefono de contacto
+     * @param fechaIngreso Fecha de ingreso
+     * @param cargo Cargo laboral
+     * @param departamento Departamento
+     * @param email Correo electronico corporativo
+     * @param sueldo Salario mensual, mayor que 0
+     * @throws ValidaRutException Si el rut no cumple el formato esperado
+     * @throws IllegalArgumentException si sueldo es menor que 0
+     */
     public Empleado(String nombre, String apellido, String textoRut, Direccion direccion, String telefono,
                     String fechaIngreso,String cargo,String departamento, String email, double sueldo) throws ValidaRutException {
        super(nombre, apellido, textoRut, direccion, telefono);
@@ -39,6 +67,26 @@ public class Empleado extends Persona{
        this.sueldo = sueldo;
     }
 
+    /**
+     * Constructor complementario que permite inicializar el empleado con los atributos de direccion individualmente.
+     *
+     * @param nombre Nombre del empleado
+     * @param apellido Apellido del empleado
+     * @param textoRut RUT en formato String
+     * @param calle Calle del domicilio
+     * @param numero Número del domicilio
+     * @param casaDepartamento Información adicional del domicilio
+     * @param comuna Comuna de domicilio
+     * @param region Region geografica
+     * @param telefono Telefono de contacto
+     * @param fechaIngreso Fecha de ingreso
+     * @param cargo Cargo laboral
+     * @param departamento Departamento
+     * @param email Correo electronico corporativo
+     * @param sueldo Salario mensual, mayor que 0
+     * @throws ValidaRutException Si el rut no cumple el formato esperado
+     * @throws IllegalArgumentException si sueldo es menor que 0
+     */
     public Empleado(String nombre, String apellido, String textoRut, String calle, int numero, String casaDepartamento, String comuna, String region,
                     String telefono, String fechaIngreso,String cargo,String departamento, String email, double sueldo) throws ValidaRutException {
         super(nombre, apellido, textoRut, calle, numero, casaDepartamento, comuna, region, telefono);
@@ -50,59 +98,95 @@ public class Empleado extends Persona{
         this.sueldo = sueldo;
     }
 
+    /** @return Fecha de ingreso del empleado*/
     public String getFechaIngreso() {
         return fechaIngreso;
     }
 
+    /** @return Cargo laboral del empleado*/
     public String getCargo() {
         return cargo;
     }
 
+    /** @return Departamento del empleado*/
     public String getDepartamento() {
         return departamento;
     }
 
+    /** @return email del empleado*/
     public String getEmail() {
         return email;
     }
 
+    /** @return Sueldo mensual del empleado*/
     public double getSueldo() {
         return sueldo;
     }
 
+    /** Establece la fecha de ingreso
+     * @param fechaIngreso Fecha en formato String
+     */
     public void setFechaIngreso(String fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
 
+    /**
+     * Establece el cargo laboral del empleado
+     * @param cargo Cargo laboral
+     */
     public void setCargo(String cargo) {
         this.cargo = cargo;
     }
 
+    /**
+     * Establece el departamento del empleado
+     * @param departamento Departamento
+     */
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
 
+    /**
+     * Establece el mail de contacto laboral
+     * @param email Email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * Establece el sueldo del empleado, validando que sea mayor a 0
+     * @param sueldo Sueldo mensual
+     * @throws IllegalArgumentException si el sueldo es menor que 0
+     */
     public void setSueldo(double sueldo) {
         validaSueldo(sueldo);
         this.sueldo = sueldo;
     }
 
+    /**
+     * Método que valida que el sueldo sea mayor 0
+     * @param sueldo Sueldo mensual
+     * @throws IllegalArgumentException si el sueldo es negativo
+     */
     public void validaSueldo(double sueldo){
         if (sueldo < 0){
             throw new IllegalArgumentException("El sueldo no puede ser menor a 0.");
         }
     }
 
+    /**
+     * Devuelve una representacion textual completa del empleado, incluye datos personales y laborales
+     * @return una cadena de texto con todos los datos formateados
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         sb.append(String.format("%-10s %s\n","F.Ingreso:",fechaIngreso));
-        sb.append(String.format("%-10s %s\n","Cargo:",cargo));
+        if (cargo != null && !cargo.isEmpty()) {
+            sb.append(String.format("%-10s %s\n","cargo:",cargo));
+        }
         sb.append(String.format("%-10s %s\n","Depto.:",departamento));
         if (email != null && !email.isEmpty()) {
             sb.append(String.format("%-10s %s\n","Email:",email));
