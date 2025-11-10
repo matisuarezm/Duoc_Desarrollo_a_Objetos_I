@@ -68,6 +68,6 @@ Para resolver este problema, deberás diseñar e implementar en Java un modelo b
 
 ## 👤 Autor del proyecto
 - **Nombre completo:** Matias Suarez M.
-- **Sección:** 002A
+- **Sección:** 003A
 - **Carrera:** Analista Programador Computacional
 - **Sede:** Carrera 100% Online
